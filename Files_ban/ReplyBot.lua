@@ -1,5 +1,4 @@
-local function mal(msg)
-local text = msg.content_.text_
+
 if text ==("المنشئ") and ChCheck(msg) or text ==("المالك") and ChCheck(msg) then
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 100},function(arg,data) 
 local admins = data.members_
@@ -21,4 +20,4 @@ end
 end
 end
 end
-return {B = mal}
+
